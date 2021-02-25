@@ -7,6 +7,8 @@ import requests
 import json
 import os
 
+from apis.open_weather_api import OpenWeatherAPI
+
 
 def initiate_jugni():
     recognizer_obj = speech_recognition.Recognizer()
@@ -35,14 +37,8 @@ def initiate_jugni():
                     subprocess.run('start microsoft.windows.camera:', shell=True)
 
                 elif "weather" in text_from_audio:
-                    config_parser_obj = ConfigParser()
-                    config_parser_obj.read("credentials.cfg")
-                    open_weather_api_app_id = config_parser_obj.get("OpenWeatherAPI", "app_id")
-                    response = requests.get(
-                        url=f"http://api.openweathermap.org/data/2.5/weather?q=Markham&appid={open_weather_api_app_id}"
-                    )
-                    temperature = json.loads(response.content).get("main", {}).get("temp")
-                    audio = gTTS(f"It is {round(temperature-273.15, 2)} degree celcius outside.")
+                    open_weather_api_obj = OpenWeatherAPI(city="Markham")
+                    audio = gTTS(open_weather_api_obj.orchestrate_flow())
                     audio.save("weather.mp3")
                     playsound("weather.mp3")
                     os.remove("weather.mp3")
