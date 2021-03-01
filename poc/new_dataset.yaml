@@ -1,0 +1,31 @@
+# playMusic intent
+---
+type: intent
+name: playMusic
+slots:
+  - name: artist
+    entity: artist
+  - name: song
+    entity: song
+utterances:
+  - Play a song by [artist](John Mayer)
+  - Can you please play a song by [artist](Ed Sheeran)
+  - Please play music by [artist](Chris Martin)
+  - Turn on some music by [artist](Pankaj Miglani)
+  - Put a song by [artist](Ayan Miglani)
+  - Play one of [artist](Kanchan Janeja)'s song
+  - Play [song](Solitude) by [artist](Burrah).
+  - Play [song](I guess I just feel like).
+  - Turn on [song](fade to black) by [artist](Metallica)
+
+# artist entity
+---
+type: entity
+name: artist
+automatically_extensible: yes
+
+# song entity
+---
+type: entity
+name: song
+automatically_extensible: yes

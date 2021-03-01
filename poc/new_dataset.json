@@ -1,0 +1,156 @@
+{
+  "entities": {
+    "artist": {
+      "automatically_extensible": true,
+      "data": [],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "song": {
+      "automatically_extensible": true,
+      "data": [],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    }
+  },
+  "intents": {
+    "playMusic": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Play a song by "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "John Mayer"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you please play a song by "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "Ed Sheeran"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please play music by "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "Chris Martin"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Turn on some music by "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "Pankaj Miglani"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Put a song by "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "Ayan Miglani"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play one of "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "Kanchan Janeja"
+            },
+            {
+              "text": "'s song"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play "
+            },
+            {
+              "entity": "song",
+              "slot_name": "song",
+              "text": "Solitude"
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "Burrah"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play "
+            },
+            {
+              "entity": "song",
+              "slot_name": "song",
+              "text": "I guess I just feel like"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Turn on "
+            },
+            {
+              "entity": "song",
+              "slot_name": "song",
+              "text": "fade to black"
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "artist",
+              "slot_name": "artist",
+              "text": "Metallica"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "language": "en"
+}
