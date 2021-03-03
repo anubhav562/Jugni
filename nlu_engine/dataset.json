@@ -1,0 +1,204 @@
+{
+  "entities": {
+    "snips/city": {}
+  },
+  "intents": {
+    "getWeather": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "What is the weather in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "San Francisco"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How is the weather in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Los Angeles"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you tell me the weather in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Beijing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What's the weather in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Paris"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please tell me the weather in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "San Francisco"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is it raining in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Los Angeles"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is it snowing in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Beijing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is it cloudy in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Paris"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What's the weather like in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "San Francisco"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I need to know the weather in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Los Angeles"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What's today's weather in "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Beijing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Get me "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Paris"
+            },
+            {
+              "text": "'s weather"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Fetch me "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "San Francisco"
+            },
+            {
+              "text": "'s weather"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please get me "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Los Angeles"
+            },
+            {
+              "text": "'s weather"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please fetch me "
+            },
+            {
+              "entity": "snips/city",
+              "slot_name": "city",
+              "text": "Beijing"
+            },
+            {
+              "text": "'s weather"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "language": "en"
+}

@@ -1,0 +1,23 @@
+# getWeather Intent
+---
+type: intent
+name: getWeather
+slots:
+  - name: city
+    entity: snips/city
+utterances:
+  - What is the weather in [city]
+  - How is the weather in [city]
+  - Can you tell me the weather in [city]
+  - What's the weather in [city]
+  - Please tell me the weather in [city]
+  - Is it raining in [city]
+  - Is it snowing in [city]
+  - Is it cloudy in [city]
+  - What's the weather like in [city]
+  - I need to know the weather in [city]
+  - What's today's weather in [city]
+  - Get me [city]'s weather
+  - Fetch me [city]'s weather
+  - Please get me [city]'s weather
+  - Please fetch me [city]'s weather

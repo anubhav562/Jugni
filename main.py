@@ -67,7 +67,7 @@ def initiate_jugni():
                 text_from_audio = recognizer_obj.recognize_google(audio)
                 print(f"Recognised the following: {text_from_audio}")
                 if "camera" in text_from_audio:
-                    playsound("camera.mp3")
+                    playsound("sounds/camera.mp3")
                     subprocess.run('start microsoft.windows.camera:', shell=True)
 
                 elif "weather" in text_from_audio:
