@@ -1,8 +1,97 @@
 {
   "entities": {
+    "action": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [
+            "switch on",
+            "put on",
+            "power up",
+            "activate",
+            "open",
+            "turn on",
+            "initiate"
+          ],
+          "value": "on"
+        },
+        {
+          "synonyms": [
+            "close",
+            "shutdown",
+            "shut down",
+            "close down"
+          ],
+          "value": "off"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
     "snips/city": {}
   },
   "intents": {
+    "cameraApplication": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Turn "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "on"
+            },
+            {
+              "text": " the camera"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please turn the camera "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "on"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Turn "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "on"
+            },
+            {
+              "text": " the camera please"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you please "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "open"
+            },
+            {
+              "text": " the camera"
+            }
+          ]
+        }
+      ]
+    },
     "getWeather": {
       "utterances": [
         {

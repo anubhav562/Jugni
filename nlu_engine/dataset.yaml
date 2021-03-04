@@ -21,3 +21,25 @@ utterances:
   - Fetch me [city]'s weather
   - Please get me [city]'s weather
   - Please fetch me [city]'s weather
+
+# cameraApplication
+---
+type: intent
+name: cameraApplication
+slots:
+  - name: action
+    entity: action
+utterances:
+  - Turn [action](on) the camera
+  - Please turn the camera [action](on)
+  - Turn [action](on) the camera please
+  - Can you please [action](open) the camera
+
+# action entity
+---
+type: entity
+name: action
+automatically_extensible: no
+values:
+- ["on", switch on, put on, power up, activate, open, turn on, initiate]
+- ["off", close, shutdown, shut down, close down]
