@@ -196,9 +196,16 @@
   },
   "custom_entity_parser": "custom_entity_parser",
   "dataset_metadata": {
-    "entities": {},
+    "entities": {
+      "action": {
+        "automatically_extensible": false
+      }
+    },
     "language_code": "en",
     "slot_name_mappings": {
+      "cameraApplication": {
+        "action": "action"
+      },
       "getWeather": {
         "city": "snips/city"
       }
