@@ -1,6 +1,7 @@
-from configparser import ConfigParser
-import requests
 import json
+import requests
+
+from configparser import ConfigParser
 
 
 class OpenWeatherAPI:
@@ -53,4 +54,3 @@ class OpenWeatherAPI:
         weather_desc = self._parse_weather_from_response()
         text = self._prepare_text_for_speech_engine(temperature, weather_desc)
         return text
-

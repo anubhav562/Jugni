@@ -1,13 +1,11 @@
 import os
 import speech_recognition
-import subprocess
 import sys
 import threading
 import time
 
 from gtts import gTTS
 from playsound import playsound
-from apis.open_weather_api import OpenWeatherAPI
 from nlu_engine.nlu_engine import NLUEngine
 from action_dispatcher import intent_to_skill_mapping
 
@@ -80,17 +78,6 @@ def initiate_jugni():
                 audio.save("generated_answer.mp3")
                 playsound("generated_answer.mp3")
                 os.remove("generated_answer.mp3")
-
-                # if "camera" in text_from_audio:
-                #     playsound("sounds/camera.mp3")
-                #     subprocess.run('start microsoft.windows.camera:', shell=True)
-                #
-                # elif "weather" in text_from_audio:
-                #     open_weather_api_obj = OpenWeatherAPI(city=slots[0]["city"])
-                #     audio = gTTS(open_weather_api_obj.orchestrate_flow())
-                #     audio.save("weather.mp3")
-                #     playsound("weather.mp3")
-                #     os.remove("weather.mp3")
 
             except speech_recognition.UnknownValueError:
                 continue

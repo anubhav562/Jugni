@@ -14,7 +14,5 @@ class NLUEngine:
         intent_name = parsed_output.get("intent", {}).get("intentName")
         slots = parsed_output.get("slots", [])
 
-        if len(slots):
-            slots = {slot["slotName"]: slot["value"]["value"] for slot in slots}
-
+        slots = {slot["slotName"]: slot["value"]["value"] for slot in slots} if len(slots) else {}
         return intent_name, slots
