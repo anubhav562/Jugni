@@ -72,7 +72,7 @@ def initiate_jugni():
                 intent, slots = nlu_engine_obj.detect_intents_and_slots(sentence=text_from_audio)
                 print(f"Detected the following intent: {intent}, with the following slots: {slots}")
 
-                if intent and slots:
+                if intent:
                     skill_obj = intent_to_skill_mapping.get(intent)(**slots)
                 else:
                     skill_obj = WebBrowser(text_to_search_for=text_from_audio)

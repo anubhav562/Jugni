@@ -20,11 +20,22 @@ TEMPLATED_RESPONSES = [
 
 class OpenWeatherAPI:
 
-    def __init__(self, city):
+    def __init__(self, city=None):
+        if city is None:
+            city = self._fetch_current_city_from_ip()
+
         self.city = city
         self.app_id = OpenWeatherAPI._fetch_app_id_from_credentials()
         self.api_endpoint = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={self.app_id}"
         self.api_response = None
+
+    @staticmethod
+    def _fetch_current_city_from_ip():
+        config_parser = ConfigParser()
+        config_parser.read("credentials.cfg")
+        api_key = config_parser.get("IPData", "api_key")
+        response = requests.get(f"https://api.ipdata.co/?api-key={api_key}").content
+        return json.loads(response)["city"]
 
     @staticmethod
     def _fetch_app_id_from_credentials():
