@@ -8,6 +8,7 @@ from gtts import gTTS
 from playsound import playsound
 from nlu_engine.nlu_engine import NLUEngine
 from action_dispatcher import intent_to_skill_mapping
+from skills.web_browser import WebBrowser
 
 
 ######################################################
@@ -71,7 +72,10 @@ def initiate_jugni():
                 intent, slots = nlu_engine_obj.detect_intents_and_slots(sentence=text_from_audio)
                 print(f"Detected the following intent: {intent}, with the following slots: {slots}")
 
-                skill_obj = intent_to_skill_mapping.get(intent)(**slots)
+                if intent and slots:
+                    skill_obj = intent_to_skill_mapping.get(intent)(**slots)
+                else:
+                    skill_obj = WebBrowser(text_to_search_for=text_from_audio)
 
                 audio = gTTS(skill_obj.orchestrate_flow())
 

@@ -1,12 +1,27 @@
 import json
+import random
 import requests
 
 from configparser import ConfigParser
 
 
+TEMPLATED_RESPONSES = [
+    "It looks like {city} has {weather_desc} today. Temperature is {temperature} degrees celsius",
+    "Currently in {city}, the temperature is {temperature} degrees celsius. It has {weather_desc} today.",
+    "Today in {city}, we have {weather_desc}. The temperature is {temperature} degrees celsius.",
+    "Today's weather outlook in {city} tends to be {weather_desc}. It's {temperature} degrees celsius outside.",
+    "Today tends to be {weather_desc} in {city}. The temperature is currently {temperature} degrees celsius",
+    "The temperature is currently {temperature} degrees celsius in {city}. Today there's {weather_desc}.",
+    "The forecast for today in {city} is {weather_desc}. The temperature is {temperature} degrees.",
+    "The weather in {city} is forecast to be {weather_desc} today."
+    "The temperature outside is {temperature} degrees."
+]
+
+
 class OpenWeatherAPI:
 
     def __init__(self, city):
+        self.city = city
         self.app_id = OpenWeatherAPI._fetch_app_id_from_credentials()
         self.api_endpoint = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={self.app_id}"
         self.api_response = None
@@ -46,7 +61,11 @@ class OpenWeatherAPI:
         return weather_desc
 
     def _prepare_text_for_speech_engine(self, temperature, weather_desc):
-        return f"It looks like this place has {weather_desc} today. Temperature is {temperature}"
+        selected_response = TEMPLATED_RESPONSES[random.randint(0, len(TEMPLATED_RESPONSES)-1)]
+        formatted_response = selected_response.format(
+            city=self.city, weather_desc=weather_desc, temperature=temperature
+        )
+        return formatted_response
 
     def orchestrate_flow(self):
         self._hit_api()
