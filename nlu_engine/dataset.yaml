@@ -31,6 +31,9 @@ slots:
     entity: action
 utterances:
   - Turn [action](on) the camera
+  - Switch the camera [action](on).
+  - Power the camera [action](on).
+  - Toggle the camera [action](on).
   - Please turn the camera [action](on)
   - Turn [action](on) the camera please
   - Can you please [action](open) the camera
