@@ -116,9 +116,7 @@
       },
       {
         "args": {
-          "entities": [
-            "place"
-          ],
+          "entities": [],
           "entity_filter": {
             "automatically_extensible": true
           },
@@ -137,6 +135,7 @@
         "args": {
           "entity_labels": [
             "snips/amountOfMoney",
+            "snips/city",
             "snips/date",
             "snips/datePeriod",
             "snips/datetime",
@@ -176,10 +175,9 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "getDirections",
+  "intent": "getWeather",
   "language_code": "en",
   "slot_name_mapping": {
-    "fromPlace": "place",
-    "toPlace": "place"
+    "city": "snips/city"
   }
 }

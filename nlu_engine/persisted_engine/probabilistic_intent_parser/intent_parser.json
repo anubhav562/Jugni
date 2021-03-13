@@ -190,8 +190,12 @@
       "slot_filler_name": "slot_filler_0"
     },
     {
-      "intent": "getWeather",
+      "intent": "getDirections",
       "slot_filler_name": "slot_filler_1"
+    },
+    {
+      "intent": "getWeather",
+      "slot_filler_name": "slot_filler_2"
     }
   ]
 }

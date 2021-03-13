@@ -46,3 +46,48 @@ automatically_extensible: no
 values:
 - ["on", switch on, put on, power up, activate, open, turn on, initiate]
 - ["off", close, shutdown, shut down, close down]
+
+
+# getDirections Intent
+---
+type: intent
+name: getDirections
+slots:
+  - name: fromPlace
+    entity: place
+  - name: toPlace
+    entity: place
+utterances:
+  - Get me the directions to [toPlace](Montreal).
+  - Get me the directions to [toPlace](Indian Sweets) please.
+  - Please get me the directions to [toPlace](Adventure Island).
+  - Fetch me the directions to [toPlace](Ottawa).
+  - Fetch me the directions to [toPlace](PVR cinema) please.
+  - Take me to [toPlace](Rajouri Garden) please.
+  - Take me to [toPlace](Munsiyari).
+  - Can you please show me the directions to [toPlace](Taj Mahal).
+  - Please take me to [toPlace](Karol Bagh).
+  - Show me the way to [toPlace](Patel Nagar) please.
+  - Show the directions [toPlace](Pacific Mall).
+  - Can you take me to [toPlace](Bikaner Sweets).
+  - Where is the nearest [toPlace](airport).
+  - Where is the nearest [toPlace](walmart).
+  - How do I get to [toPlace](New York).
+  - Where is the closest [toPlace](Target).
+  - Where can i find the nearest [toPlace](Dollar Store).
+  - Where is the nearest [toPlace](Gas Station).
+  - Get me the directions to nearest [toPlace](Dollarama).
+  - Fetch me the directions to closest [toPlace](Costco).
+  - How do I reach nearest [toPlace](CIBC bank).
+  - Please show me the directions from [fromPlace](Ottawa) to [toPlace](Montreal).
+  - Fetch me the way from [fromPlace](Taj Mahal) to [toPlace] (Vrindavan).
+  - How do I get to [toPlace](Delhi) from [fromPlace](Faridabad).
+  - How do I drive from [fromPlace](Ghaziabad) to [toPlace](Kanpur).
+  - How do I reach [toPlace](Pune) from [fromPlace](Lokhandwala).
+
+
+# place entity
+---
+type: entity
+name: place
+automatically_extensible: yes

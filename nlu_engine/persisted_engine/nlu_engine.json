@@ -199,12 +199,19 @@
     "entities": {
       "action": {
         "automatically_extensible": false
+      },
+      "place": {
+        "automatically_extensible": true
       }
     },
     "language_code": "en",
     "slot_name_mappings": {
       "cameraApplication": {
         "action": "action"
+      },
+      "getDirections": {
+        "fromPlace": "place",
+        "toPlace": "place"
       },
       "getWeather": {
         "city": "snips/city"

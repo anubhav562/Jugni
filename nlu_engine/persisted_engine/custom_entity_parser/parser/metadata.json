@@ -3,6 +3,10 @@
     {
       "entity_identifier": "action",
       "entity_parser": "parser_1"
+    },
+    {
+      "entity_identifier": "place",
+      "entity_parser": "parser_2"
     }
   ]
 }

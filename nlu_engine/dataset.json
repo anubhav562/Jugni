@@ -28,6 +28,12 @@
       "matching_strictness": 1.0,
       "use_synonyms": true
     },
+    "place": {
+      "automatically_extensible": true,
+      "data": [],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
     "snips/city": {}
   },
   "intents": {
@@ -45,6 +51,51 @@
             },
             {
               "text": " the camera"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Switch the camera "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "on"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Power the camera "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "on"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Toggle the camera "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "on"
+            },
+            {
+              "text": "."
             }
           ]
         },
@@ -87,6 +138,440 @@
             },
             {
               "text": " the camera"
+            }
+          ]
+        }
+      ]
+    },
+    "getDirections": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Get me the directions to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Montreal"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Get me the directions to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Indian Sweets"
+            },
+            {
+              "text": " please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please get me the directions to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Adventure Island"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Fetch me the directions to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Ottawa"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Fetch me the directions to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "PVR cinema"
+            },
+            {
+              "text": " please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Take me to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Rajouri Garden"
+            },
+            {
+              "text": " please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Take me to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Munsiyari"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you please show me the directions to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Taj Mahal"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please take me to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Karol Bagh"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Show me the way to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Patel Nagar"
+            },
+            {
+              "text": " please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Show the directions "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Pacific Mall"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you take me to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Bikaner Sweets"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Where is the nearest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "airport"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Where is the nearest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "walmart"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How do I get to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "New York"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Where is the closest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Target"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Where can i find the nearest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Dollar Store"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Where is the nearest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Gas Station"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Get me the directions to nearest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Dollarama"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Fetch me the directions to closest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Costco"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How do I reach nearest "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "CIBC bank"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please show me the directions from "
+            },
+            {
+              "entity": "place",
+              "slot_name": "fromPlace",
+              "text": "Ottawa"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Montreal"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Fetch me the way from "
+            },
+            {
+              "entity": "place",
+              "slot_name": "fromPlace",
+              "text": "Taj Mahal"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Montreal"
+            },
+            {
+              "text": " (Vrindavan)."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How do I get to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Delhi"
+            },
+            {
+              "text": " from "
+            },
+            {
+              "entity": "place",
+              "slot_name": "fromPlace",
+              "text": "Faridabad"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How do I drive from "
+            },
+            {
+              "entity": "place",
+              "slot_name": "fromPlace",
+              "text": "Ghaziabad"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Kanpur"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How do I reach "
+            },
+            {
+              "entity": "place",
+              "slot_name": "toPlace",
+              "text": "Pune"
+            },
+            {
+              "text": " from "
+            },
+            {
+              "entity": "place",
+              "slot_name": "fromPlace",
+              "text": "Lokhandwala"
+            },
+            {
+              "text": "."
             }
           ]
         }
