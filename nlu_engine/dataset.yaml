@@ -53,41 +53,73 @@ values:
 type: intent
 name: getDirections
 slots:
-  - name: fromPlace
+  - name: origin
     entity: place
-  - name: toPlace
+  - name: destination
     entity: place
+  - name: travelMode
+    entity: travelMode
 utterances:
-  - Get me the directions to [toPlace](Montreal).
-  - Get me the directions to [toPlace](Indian Sweets) please.
-  - Please get me the directions to [toPlace](Adventure Island).
-  - Fetch me the directions to [toPlace](Ottawa).
-  - Fetch me the directions to [toPlace](PVR cinema) please.
-  - Take me to [toPlace](Rajouri Garden) please.
-  - Take me to [toPlace](Munsiyari).
-  - Can you please show me the directions to [toPlace](Taj Mahal).
-  - Please take me to [toPlace](Karol Bagh).
-  - Show me the way to [toPlace](Patel Nagar) please.
-  - Show the directions [toPlace](Pacific Mall).
-  - Can you take me to [toPlace](Bikaner Sweets).
-  - Where is the nearest [toPlace](airport).
-  - Where is the nearest [toPlace](walmart).
-  - How do I get to [toPlace](New York).
-  - Where is the closest [toPlace](Target).
-  - Where can i find the nearest [toPlace](Dollar Store).
-  - Where is the nearest [toPlace](Gas Station).
-  - Get me the directions to nearest [toPlace](Dollarama).
-  - Fetch me the directions to closest [toPlace](Costco).
-  - How do I reach nearest [toPlace](CIBC bank).
-  - Please show me the directions from [fromPlace](Ottawa) to [toPlace](Montreal).
-  - Fetch me the way from [fromPlace](Taj Mahal) to [toPlace] (Vrindavan).
-  - How do I get to [toPlace](Delhi) from [fromPlace](Faridabad).
-  - How do I drive from [fromPlace](Ghaziabad) to [toPlace](Kanpur).
-  - How do I reach [toPlace](Pune) from [fromPlace](Lokhandwala).
-
+  - Get me the directions to [destination](Montreal).
+  - Get me the directions to [destination](Indian Sweets) please.
+  - Please get me the directions to [destination](Adventure Island).
+  - Fetch me the directions to [destination](Ottawa).
+  - Fetch me the directions to [destination](PVR cinema) please.
+  - Take me to [destination](Rajouri Garden) please.
+  - Take me to [destination](Munsiyari).
+  - Can you please show me the directions to [destination](Taj Mahal).
+  - Please take me to [destination](Karol Bagh).
+  - Show me the way to [destination](Patel Nagar) please.
+  - Show the directions [destination](Pacific Mall).
+  - Can you take me to [destination](Bikaner Sweets).
+  - Where is the nearest [destination](airport).
+  - Where is the nearest [destination](walmart).
+  - How do I get to [destination](New York).
+  - Where is the closest [destination](Target).
+  - Where can i find the nearest [destination](Dollar Store).
+  - Where is the nearest [destination](Gas Station).
+  - Get me the directions to nearest [destination](Dollarama).
+  - Fetch me the directions to closest [destination](Costco).
+  - How do I reach nearest [destination](CIBC bank).
+  - Please show me the directions from [origin](Ottawa) to [destination](Montreal).
+  - Fetch me the way from [origin](Taj Mahal) to [destination] (Vrindavan).
+  - How do I get to [destination](Delhi) from [origin](Faridabad).
+  - How do I drive from [origin](Ghaziabad) to [destination](Kanpur).
+  - How do I reach [destination](Pune) from [origin](Lokhandwala).
+  - Give me [travelMode](driving) directions to [destination](Montreal).
+  - Get me the [travelMode](walking) directions to [destination](Indian Sweets) please.
+  - Please get me [travelMode](cycling) directions to [destination](Adventure Island).
+  - Fetch me the [travelMode](bus) directions to [destination](Ottawa).
+  - Fetch me the [travelMode](bus) route to [destination](PVR cinema) please.
+  - Can you please show me the [travelMode](car) directions to [destination](Taj Mahal).
+  - Please take me to [destination](Karol Bagh) on [travelMode] foot.
+  - Show me the [travelMode](walking) way to [destination](Patel Nagar) please.
+  - Show the [travelMode] drive directions to [destination](Pacific Mall).
+  - Can you take me to [destination](Bikaner Sweets), I am in a [travelMode](car) right now.
+  - How do I get to [destination](New York) by [travelMode](transit).
+  - Get me the [travelMode](walking) directions to nearest [destination](Dollarama).
+  - Fetch me the [travelMode](driving) directions to closest [destination](Costco).
+  - I am [travelMode](walking), How do I reach nearest [destination](bank).
+  - Please show me the [travel](drive) directions from [origin](Ottawa) to [destination](Montreal).
+  - How do I get to [destination](Delhi) from [origin](Faridabad) by [travel](public transport).
+  - How do I [travelMode](drive) from [origin](Ghaziabad) to [destination](Kanpur).
+  - How do I reach [destination](Pune) from [origin](Lokhandwala).
+  - Navigate me to [destination](Tagore Garden).
+  - I am riding a [travelMode](cycle), please give me the directions to nearest [destination](McDonalds).
 
 # place entity
 ---
 type: entity
 name: place
 automatically_extensible: yes
+
+# travel mode entity
+---
+type: entity
+name: travelMode
+automatically_extensible: no
+values:
+  - [driving, car, four wheeler, drive]
+  - [walking, foot, feet, walk]
+  - [bicycling, cycling, cycle]
+  - [transit, bus, public transport]

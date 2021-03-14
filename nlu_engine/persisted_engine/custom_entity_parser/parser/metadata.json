@@ -7,6 +7,14 @@
     {
       "entity_identifier": "place",
       "entity_parser": "parser_2"
+    },
+    {
+      "entity_identifier": "travel",
+      "entity_parser": "parser_3"
+    },
+    {
+      "entity_identifier": "travelMode",
+      "entity_parser": "parser_4"
     }
   ]
 }

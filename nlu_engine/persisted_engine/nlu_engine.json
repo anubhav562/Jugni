@@ -202,6 +202,12 @@
       },
       "place": {
         "automatically_extensible": true
+      },
+      "travel": {
+        "automatically_extensible": true
+      },
+      "travelMode": {
+        "automatically_extensible": false
       }
     },
     "language_code": "en",
@@ -210,8 +216,10 @@
         "action": "action"
       },
       "getDirections": {
-        "fromPlace": "place",
-        "toPlace": "place"
+        "destination": "place",
+        "origin": "place",
+        "travel": "travel",
+        "travelMode": "travelMode"
       },
       "getWeather": {
         "city": "snips/city"

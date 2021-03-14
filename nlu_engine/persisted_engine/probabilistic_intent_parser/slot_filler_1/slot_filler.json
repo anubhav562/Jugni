@@ -100,7 +100,9 @@
       },
       {
         "args": {
-          "entities": [],
+          "entities": [
+            "travelMode"
+          ],
           "entity_filter": {
             "automatically_extensible": false
           },
@@ -117,6 +119,7 @@
       {
         "args": {
           "entities": [
+            "travel",
             "place"
           ],
           "entity_filter": {
@@ -179,7 +182,9 @@
   "intent": "getDirections",
   "language_code": "en",
   "slot_name_mapping": {
-    "fromPlace": "place",
-    "toPlace": "place"
+    "destination": "place",
+    "origin": "place",
+    "travel": "travel",
+    "travelMode": "travelMode"
   }
 }
