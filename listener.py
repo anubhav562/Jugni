@@ -79,9 +79,9 @@ def initiate_jugni():
 
                 audio = gTTS(skill_obj.orchestrate_flow())
 
-                audio.save("generated_answer.mp3")
-                playsound("generated_answer.mp3")
-                os.remove("generated_answer.mp3")
+                audio.save("generated_response.mp3")
+                playsound("generated_response.mp3")
+                os.remove("generated_response.mp3")
 
             except speech_recognition.UnknownValueError:
                 continue
