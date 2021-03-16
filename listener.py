@@ -46,6 +46,28 @@ def _flush_output_to_console():
         sys.stdout.flush()
         time.sleep(0.03) if char != " " else None
 
+
+def _play_response_to_user(response_from_skill):
+
+    if type(response_from_skill) == str:
+        audio = gTTS(response_from_skill)
+        audio.save("generated_response.mp3")
+        playsound("generated_response.mp3")
+        os.remove("generated_response.mp3")
+
+    elif type(response_from_skill) == dict:
+        for response in response_from_skill["list_of_utterances"]:
+            audio = gTTS(response)
+
+            audio.save("generated_response.mp3")
+            playsound("generated_response.mp3", )
+            os.remove("generated_response.mp3")
+
+            if response_from_skill["interval_sound_required"]:
+                playsound("sounds/interval_sound.mp3")
+            else:
+                time.sleep(1)
+
 ####################################################
 # Initiate Jugni ###################################
 ####################################################
@@ -66,6 +88,11 @@ def initiate_jugni():
             audio = recognizer_obj.listen(source)
             try:
                 text_from_audio = recognizer_obj.recognize_google(audio)
+
+                if text_from_audio.lower() == "terminate":
+                    playsound("sounds/jugni_terminate.mp3")
+                    break
+
                 print(f"Recognised the following: {text_from_audio}")
 
                 nlu_engine_obj = NLUEngine()
@@ -77,11 +104,8 @@ def initiate_jugni():
                 else:
                     skill_obj = WebBrowser(text_to_search_for=text_from_audio)
 
-                audio = gTTS(skill_obj.orchestrate_flow())
-
-                audio.save("generated_response.mp3")
-                playsound("generated_response.mp3")
-                os.remove("generated_response.mp3")
+                response_from_skill = skill_obj.orchestrate_flow()
+                _play_response_to_user(response_from_skill)
 
             except speech_recognition.UnknownValueError:
                 continue

@@ -196,6 +196,10 @@
     {
       "intent": "getWeather",
       "slot_filler_name": "slot_filler_2"
+    },
+    {
+      "intent": "joke",
+      "slot_filler_name": "slot_filler_3"
     }
   ]
 }
