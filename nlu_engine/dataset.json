@@ -1096,6 +1096,45 @@
         }
       ]
     },
+    "getNews": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Please read me the latest news."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you get me the top news today."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Recite me the top headlines today please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Will you please tell me today's headlines."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Let me know today's top news."
+            }
+          ]
+        }
+      ]
+    },
     "getWeather": {
       "utterances": [
         {

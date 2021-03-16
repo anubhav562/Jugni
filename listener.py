@@ -46,6 +46,23 @@ def _flush_output_to_console():
         sys.stdout.flush()
         time.sleep(0.03) if char != " " else None
 
+
+def _play_response_to_user(response_from_skill):
+
+    if type(response_from_skill) == str:
+        audio = gTTS(response_from_skill)
+        audio.save("generated_response.mp3")
+        playsound("generated_response.mp3")
+        os.remove("generated_response.mp3")
+
+    elif type(response_from_skill) == list:
+        for response in response_from_skill:
+            audio = gTTS(response)
+            audio.save("generated_response.mp3")
+            playsound("generated_response.mp3")
+            os.remove("generated_response.mp3")
+            playsound("sounds/interval_sound.mp3")
+
 ####################################################
 # Initiate Jugni ###################################
 ####################################################
@@ -77,11 +94,9 @@ def initiate_jugni():
                 else:
                     skill_obj = WebBrowser(text_to_search_for=text_from_audio)
 
-                audio = gTTS(skill_obj.orchestrate_flow())
+                response_from_skill = skill_obj.orchestrate_flow()
 
-                audio.save("generated_response.mp3")
-                playsound("generated_response.mp3")
-                os.remove("generated_response.mp3")
+                _play_response_to_user(response_from_skill)
 
             except speech_recognition.UnknownValueError:
                 continue

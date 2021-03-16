@@ -221,6 +221,7 @@
         "travel": "travel",
         "travelMode": "travelMode"
       },
+      "getNews": {},
       "getWeather": {
         "city": "snips/city"
       }

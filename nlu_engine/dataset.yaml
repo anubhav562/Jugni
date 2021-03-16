@@ -123,3 +123,18 @@ values:
   - [walking, foot, feet, walk]
   - [bicycling, cycling, cycle]
   - [transit, bus, public transport]
+
+
+# getNews Intent
+---
+type: intent
+name: getNews
+slots:
+  - name: country
+    entity: snips/country
+utterances:
+  - Please read me the latest news.
+  - Can you get me the top news today.
+  - Recite me the top headlines today please.
+  - Will you please tell me today's headlines.
+  - Let me know today's top news.

@@ -194,8 +194,12 @@
       "slot_filler_name": "slot_filler_1"
     },
     {
-      "intent": "getWeather",
+      "intent": "getNews",
       "slot_filler_name": "slot_filler_2"
+    },
+    {
+      "intent": "getWeather",
+      "slot_filler_name": "slot_filler_3"
     }
   ]
 }
