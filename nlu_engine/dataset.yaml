@@ -123,3 +123,22 @@ values:
   - [walking, foot, feet, walk]
   - [bicycling, cycling, cycle]
   - [transit, bus, public transport]
+
+
+# joke Intent
+---
+type: intent
+name: joke
+utterances:
+  - Hey, can you please tell me a joke.
+  - Please tell me a joke.
+  - Tell me a joke, please.
+  - Make me laugh please.
+  - Tell me the silliest joke ever.
+  - I am sad, make me happy.
+  - Recite me a joke.
+  - Please recite me a joke.
+  - Tell me a pun.
+  - Tell me a gag.
+  - Please recite me a pun.
+  - Make me giggle please.

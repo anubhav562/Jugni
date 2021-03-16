@@ -223,7 +223,8 @@
       },
       "getWeather": {
         "city": "snips/city"
-      }
+      },
+      "joke": {}
     }
   },
   "intent_parsers": [

@@ -1291,6 +1291,94 @@
           ]
         }
       ]
+    },
+    "joke": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Hey, can you please tell me a joke."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please tell me a joke."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me a joke, please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me laugh please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the silliest joke ever."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I am sad, make me happy."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Recite me a joke."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please recite me a joke."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me a pun."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me a gag."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please recite me a pun."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me giggle please."
+            }
+          ]
+        }
+      ]
     }
   },
   "language": "en"
