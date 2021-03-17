@@ -224,7 +224,8 @@
       "getWeather": {
         "city": "snips/city"
       },
-      "joke": {}
+      "joke": {},
+      "terminate": {}
     }
   },
   "intent_parsers": [
