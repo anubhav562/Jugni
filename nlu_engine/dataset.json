@@ -1379,6 +1379,122 @@
           ]
         }
       ]
+    },
+    "terminate": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Hey Jugni, terminate."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Terminate please."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Shut yourself down."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Bye bye jugni."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Bye Jugni, talk to you soon."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "bye bye jugni, take care."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "It's time to say goodbye."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Terminate."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Shut Down."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Bye Bye Jugni."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Jugni Turn off."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I will see you later."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Talk to you soon."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Terminate right now."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you please turn off."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you please terminate yourself."
+            }
+          ]
+        }
+      ]
     }
   },
   "language": "en"

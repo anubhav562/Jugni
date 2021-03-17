@@ -200,6 +200,10 @@
     {
       "intent": "joke",
       "slot_filler_name": "slot_filler_3"
+    },
+    {
+      "intent": "terminate",
+      "slot_filler_name": "slot_filler_4"
     }
   ]
 }

@@ -142,3 +142,26 @@ utterances:
   - Tell me a gag.
   - Please recite me a pun.
   - Make me giggle please.
+
+
+# Jugni Terminate Intent
+---
+type: intent
+name: terminate
+utterances:
+  - Hey Jugni, terminate.
+  - Terminate please.
+  - Shut yourself down.
+  - Bye bye jugni.
+  - Bye Jugni, talk to you soon.
+  - bye bye jugni, take care.
+  - It's time to say goodbye.
+  - Terminate.
+  - Shut Down.
+  - Bye Bye Jugni.
+  - Jugni Turn off.
+  - I will see you later.
+  - Talk to you soon.
+  - Terminate right now.
+  - Can you please turn off.
+  - Can you please terminate yourself.

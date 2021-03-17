@@ -1,72 +1,12 @@
-import os
 import speech_recognition
-import sys
-import threading
 import time
 
-from gtts import gTTS
-from playsound import playsound
-from nlu_engine.nlu_engine import NLUEngine
 from action_dispatcher import intent_to_skill_mapping
+from helper import _flush_output_to_console, _play_response_to_user, _play_startup_sound
+from nlu_engine.nlu_engine import NLUEngine
+from playsound import playsound
 from skills.web_browser import WebBrowser
 
-
-######################################################
-# Helper functions ###################################
-######################################################
-
-def _play_startup_sound():
-    """
-    This function plays the jugni startup sound in an async fashion.
-    It makes the use of threading and opens a daemon in the background.
-    :return: None
-    """
-    threading.Thread(
-        target=playsound,
-        args=('sounds/jugni_startup_sound.mp3',),
-        daemon=True
-    ).start()
-
-
-def _flush_output_to_console():
-    jugni_console_text = """
-    ##################################################\n
-    ######### #      #  #######   ##     #  #########
-        #     #      #  #         # #    #      #     
-        #     #      #  #         #  #   #      #      
-        #     #      #  #   ####  #   #  #      #      
-    #   #      #    #   #      #  #    # #      #      
-      ##        ####    ########  #     ##  #########\n 
-    ******* Your very own Virtual Assistant **********
-    ##################################################\n
-    """
-
-    for char in jugni_console_text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03) if char != " " else None
-
-
-def _play_response_to_user(response_from_skill):
-
-    if type(response_from_skill) == str:
-        audio = gTTS(response_from_skill)
-        audio.save("generated_response.mp3")
-        playsound("generated_response.mp3")
-        os.remove("generated_response.mp3")
-
-    elif type(response_from_skill) == dict:
-        for response in response_from_skill["list_of_utterances"]:
-            audio = gTTS(response)
-
-            audio.save("generated_response.mp3")
-            playsound("generated_response.mp3", )
-            os.remove("generated_response.mp3")
-
-            if response_from_skill["interval_sound_required"]:
-                playsound("sounds/interval_sound.mp3")
-            else:
-                time.sleep(1)
 
 ####################################################
 # Initiate Jugni ###################################
@@ -105,7 +45,7 @@ def initiate_jugni():
                     skill_obj = WebBrowser(text_to_search_for=text_from_audio)
 
                 response_from_skill = skill_obj.orchestrate_flow()
-                _play_response_to_user(response_from_skill)
+                _play_response_to_user(response_from_skill) if response_from_skill else None
 
             except speech_recognition.UnknownValueError:
                 continue
