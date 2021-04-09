@@ -186,24 +186,28 @@
   },
   "slot_fillers": [
     {
-      "intent": "cameraApplication",
+      "intent": "actionsGuide",
       "slot_filler_name": "slot_filler_0"
     },
     {
-      "intent": "getDirections",
+      "intent": "cameraApplication",
       "slot_filler_name": "slot_filler_1"
     },
     {
-      "intent": "getWeather",
+      "intent": "getDirections",
       "slot_filler_name": "slot_filler_2"
     },
     {
-      "intent": "joke",
+      "intent": "getWeather",
       "slot_filler_name": "slot_filler_3"
     },
     {
-      "intent": "terminate",
+      "intent": "joke",
       "slot_filler_name": "slot_filler_4"
+    },
+    {
+      "intent": "terminate",
+      "slot_filler_name": "slot_filler_5"
     }
   ]
 }

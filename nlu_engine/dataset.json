@@ -80,6 +80,87 @@
     }
   },
   "intents": {
+    "actionsGuide": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "What can you do for me"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What all can you do for me"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Hey what all actions can you perform"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Hey what all do you do"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Hey Jugni, what can you help me with"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please tell me about what all can you do"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Which actions do you perform"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is your scope"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What all actions are in your scope"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What are you programmed to perform"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What all are you programmed to perform"
+            }
+          ]
+        }
+      ]
+    },
     "cameraApplication": {
       "utterances": [
         {

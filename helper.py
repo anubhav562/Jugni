@@ -45,6 +45,8 @@ def _flush_output_to_console():
 
 def _introduce_jugni():
     playsound("sounds/jugni_introduction.mp3")
+    time.sleep(0.5)
+    playsound("sounds/jugni_introduction_2.mp3")
 
 
 def _read_text(text):
@@ -68,4 +70,4 @@ def _play_response_to_user(response_from_skill):
             if response_from_skill["interval_sound_required"]:
                 playsound("sounds/interval_sound.mp3")
             else:
-                time.sleep(1)
+                time.sleep(0.4)

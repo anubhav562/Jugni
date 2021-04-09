@@ -1,3 +1,21 @@
+# Inform about what all actions can Jugni perform
+---
+type: intent
+name: actionsGuide
+utterances:
+  - What can you do for me
+  - What all can you do for me
+  - Hey what all actions can you perform
+  - Hey what all do you do
+  - Hey Jugni, what can you help me with
+  - Please tell me about what all can you do
+  - Which actions do you perform
+  - What is your scope
+  - What all actions are in your scope
+  - What are you programmed to perform
+  - What all are you programmed to perform
+
+
 # getWeather Intent
 ---
 type: intent

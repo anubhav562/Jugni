@@ -100,7 +100,9 @@
       },
       {
         "args": {
-          "entities": [],
+          "entities": [
+            "travelMode"
+          ],
           "entity_filter": {
             "automatically_extensible": false
           },
@@ -116,7 +118,10 @@
       },
       {
         "args": {
-          "entities": [],
+          "entities": [
+            "travel",
+            "place"
+          ],
           "entity_filter": {
             "automatically_extensible": true
           },
@@ -135,7 +140,6 @@
         "args": {
           "entity_labels": [
             "snips/amountOfMoney",
-            "snips/city",
             "snips/date",
             "snips/datePeriod",
             "snips/datetime",
@@ -175,9 +179,12 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "getWeather",
+  "intent": "getDirections",
   "language_code": "en",
   "slot_name_mapping": {
-    "city": "snips/city"
+    "destination": "place",
+    "origin": "place",
+    "travel": "travel",
+    "travelMode": "travelMode"
   }
 }
