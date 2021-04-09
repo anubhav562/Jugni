@@ -2,7 +2,7 @@ import speech_recognition
 import time
 
 from action_dispatcher import intent_to_skill_mapping
-from helper import _flush_output_to_console, _play_response_to_user, _play_startup_sound
+from helper import _flush_output_to_console, _introduce_jugni, _play_response_to_user, _play_startup_sound
 from nlu_engine.nlu_engine import NLUEngine
 from playsound import playsound
 from skills.web_browser import WebBrowser
@@ -17,11 +17,10 @@ def initiate_jugni():
     _play_startup_sound()
     _flush_output_to_console()
 
-    time.sleep(0.1)
-
     recognizer_obj = speech_recognition.Recognizer()
     with speech_recognition.Microphone() as source:
         recognizer_obj.adjust_for_ambient_noise(source)
+        _introduce_jugni()
         print("Listening..............")
 
         while True:

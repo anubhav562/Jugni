@@ -43,6 +43,10 @@ def _flush_output_to_console():
         time.sleep(0.03) if char != " " else None
 
 
+def _introduce_jugni():
+    playsound("sounds/jugni_introduction.mp3")
+
+
 def _read_text(text):
     audio = gTTS(text)
     audio.save("generated_response.mp3")
